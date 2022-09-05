@@ -23,3 +23,13 @@ steps:
     runOptions: 'commands'
     commands: 'touch /home/ubuntu/nn'
     readyTimeout: '20000'
+
+
+trigger:
+- dev
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'enn-product-dev'
+    runOptions: 'commands'
+    commands: 'touch /home/ubuntu/ab'
+    readyTimeout: '20000'
